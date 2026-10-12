@@ -1,0 +1,31 @@
+# Local Postgres for development and integration tests (docs/ARCHITECTURE.md §8).
+# - Same major version as production (Neon, Postgres 18).
+# - Host port defaults to 5433 because 5432 is often taken by other projects.
+#   To change it, set YODDHA_DB_PORT in your shell or in a .env file (compose does not read .env.local),
+#   and update the URLs in .env.local to match.
+# - Bound to 127.0.0.1 only; these are throwaway local credentials.
+name: yoddha-prep
+
+services:
+  db:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: yoddha
+      POSTGRES_PASSWORD: yoddha
+      POSTGRES_DB: yoddha_dev
+    ports:
+      - "127.0.0.1:${YODDHA_DB_PORT:-5433}:5432"
+    volumes:
+      # Postgres 18+ images keep data under /var/lib/postgresql/<major>/, so mount the parent.
+      - pgdata:/var/lib/postgresql
+      # Runs once, when the volume is first created: creates the yoddha_test database.
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U yoddha -d yoddha_dev"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+volumes:
+  pgdata:
