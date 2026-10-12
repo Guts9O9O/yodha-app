@@ -10,7 +10,8 @@ stack, schema, authz, batch plan), `docs/IMPORT_FORMAT.md` (plan JSON spec), `do
   report results, list manual checks for the owner, commit. Stop for owner review at each milestone end.
 - Git: one branch per milestone (`m1-scaffold`, `m2-backend`, …), merged to `main` at review.
   Vercel deploys production from `main`. Commit subjects like "M1.3: <what>".
-- Verify versions and APIs in official docs before using them; don't rely on memory.
+- Verify versions and APIs in official docs before using them; don't rely on memory. Next.js docs for
+  the installed version ship in `node_modules/next/dist/docs/` (see `AGENTS.md`).
 - No fake data. Honest empty states. Seeds: only race reference data + approved benchmark types.
   Plans, foods, prices enter only via import (IMPORT_FORMAT.md) or user entry.
   Never invent food composition values; every food revision has `source` + `isEstimate`.

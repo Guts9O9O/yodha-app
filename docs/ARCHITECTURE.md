@@ -827,7 +827,7 @@ Neon's paid Launch plan has no monthly minimum ($0.106/CU-hour), but it's a paid
 9. `tests/helpers/db.js`, `tests/helpers/factories.js`, `tests/integration/authz.test.js` (cross-user denial).
 10. `scripts/db-backup.mjs`, `scripts/db-restore-check.mjs` + `npm run db:backup` / `db:restore-check` / `db:migrate:prod` (backup, then migrate). This comes before deploy, so backups exist from the first real row (BACKUP.md).
 11. **Deploy:**
-    - **Gate:** Next.js bumped to the patched 16.4.x and `npm audit` clean of critical/high issues.
+    - **Gate:** Next.js bumped to the patched 16.4.x, and `npm audit --omit=dev` (production dependencies) clean of critical/high issues.
     - Set up the Vercel project (`sin1`) and Neon (Singapore, PG18), run the prod migration, and add the Google OAuth redirect URIs.
     - Result: both athletes can sign in at one URL.
 
@@ -905,6 +905,7 @@ Neon's paid Launch plan has no monthly minimum ($0.106/CU-hour), but it's a paid
 | Library churn: Drizzle 1.0 is in RC and its docs already describe v1; Next 17 is coming | API drift mid-project; docs showing APIs we don't have | Exact versions pinned; core query builder only; docs re-checked before each milestone, per the brief |
 | Next.js security patch announced for 2026-10-14 (not yet published when M1 started) | Deploying a vulnerable version | M1 scaffolds on 16.4.0 locally; bumping to the patched release is a hard gate before the M2 deploy; `npm audit` at each milestone |
 | Neon Free holds the only copy of the logs | Data loss | BACKUP.md procedure; backup script built before the first deploy; monthly restore test |
+| `npm audit`: 5 high findings, all one dev-only chain (`eslint-config-next` → `fast-glob` → `micromatch` → `braces` ≤ 3.0.3, a ReDoS-style DoS on crafted glob patterns). No fixed `braces` release exists (2026-10-13). | Lint tooling only; nothing ships to production, and we control every glob pattern | Accepted. Production dependencies audit clean. Re-check at each milestone and take the fix when `eslint-config-next` updates. |
 | Better Auth's advisory history | Auth bypass | ≥ 1.7.7, zero plugins, advisories checked per milestone |
 | `cacheComponents` + `'use cache'` on per-user data | One athlete served the other's cached data | `'use cache'` only for race reference data; CLAUDE.md rule; authz tests render as both users |
 

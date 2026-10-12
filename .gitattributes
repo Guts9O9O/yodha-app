@@ -1,0 +1,8 @@
+# Keep LF in the working tree on Windows too, so Prettier and diffs stay consistent.
+* text=auto eol=lf
+
+*.ico binary
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.dump binary
