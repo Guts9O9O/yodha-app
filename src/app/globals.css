@@ -1,19 +1,97 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-/* Dark-only app. Full design tokens arrive with shadcn/ui in M1 batch 3. */
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
+/* The app is dark-only: <html class="dark">, and the palette below lives on :root.
+   The dark variant stays wired up so shadcn components' dark: utilities apply. */
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
+:root {
+  color-scheme: dark;
+  --radius: 0.75rem;
+
+  /* Neutral near-black surfaces, lifted in steps for cards and popovers. */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.97 0 0);
+  --card: oklch(0.19 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.21 0 0);
+  --popover-foreground: oklch(0.97 0 0);
+  --secondary: oklch(0.26 0 0);
+  --secondary-foreground: oklch(0.97 0 0);
+  --muted: oklch(0.26 0 0);
+  --muted-foreground: oklch(0.71 0 0);
+  --accent: oklch(0.26 0 0);
+  --accent-foreground: oklch(0.97 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+
+  /* One restrained accent (amber) for primary actions and focus. */
+  --primary: oklch(0.8 0.15 75);
+  --primary-foreground: oklch(0.2 0.03 75);
+  --ring: oklch(0.8 0.15 75 / 60%);
+
+  /* Status colours: red is reserved for stop/over-budget/errors. */
+  --destructive: oklch(0.7 0.19 22);
+  --warning: oklch(0.82 0.16 85);
+  --success: oklch(0.75 0.15 150);
+
+  /* Chart series, distinguishable on dark backgrounds (refined in M8). */
+  --chart-1: oklch(0.8 0.15 75);
+  --chart-2: oklch(0.72 0.12 230);
+  --chart-3: oklch(0.75 0.14 155);
+  --chart-4: oklch(0.7 0.15 300);
+  --chart-5: oklch(0.72 0.16 15);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
