@@ -30,13 +30,14 @@ stack, schema, authz, batch plan), `docs/IMPORT_FORMAT.md` (plan JSON spec), `do
 - Better Auth ≥ 1.7.7, Google only, no plugins. Allowlist via `ALLOWED_EMAILS`.
 - Next.js: bump to the patched 16.4.x release before the first deploy (M2 gate).
 
-## Commands (added during M1–M2; keep this list in sync with package.json)
+## Commands (keep in sync with package.json)
 - `npm run dev` / `npm run build` / `npm start`
-- `npm run lint` / `npm run format` / `npm run format:check`
-- `npm test` (unit) / `npm run test:integration` (needs Docker DB) / `npm run test:all`
-- `npm run db:up` / `npm run db:down` (Docker Postgres 18: dev + test DBs)
-- `npm run db:generate` / `npm run db:migrate` / `npm run db:seed`
-- `npm run db:backup` / `npm run db:restore-check` / `npm run db:migrate:prod` (see docs/BACKUP.md)
+- `npm run lint` (warnings fail) / `npm run lint:fix` / `npm run format` / `npm run format:check`
+- `npm test` (unit) / `npm run test:integration` (needs `npm run db:up`) / `npm run test:all`
+- `npm run db:up` / `npm run db:down` / `npm run db:psql` — Docker Postgres 18 on localhost:5433,
+  databases `yoddha_dev` and `yoddha_test`
+- Planned in M2: `db:generate`, `db:migrate`, `db:seed`, `db:backup`, `db:restore-check`,
+  `db:migrate:prod` (see docs/BACKUP.md)
 
 ## Layout
 `src/app` routes (thin) · `src/features/<domain>` UI + server actions · `src/lib` pure logic
