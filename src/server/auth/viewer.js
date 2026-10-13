@@ -16,9 +16,10 @@ import { getAllowlist, getAuth } from "./auth.js";
  * @returns {Promise<Readonly<import("../dal/viewer.js").Viewer> | null>}
  */
 export const getViewer = cache(async () => {
-  const session = await getAuth().api.getSession({
-    headers: await headers(),
-  });
+  // Read the request first: during prerendering this is where rendering stops, so the auth
+  // instance (and its secrets) is only touched for real requests.
+  const requestHeaders = await headers();
+  const session = await getAuth().api.getSession({ headers: requestHeaders });
   if (!session?.user) return null;
   if (!isEmailAllowed(getAllowlist(), session.user.email)) return null;
   return loadViewer(session.user);
