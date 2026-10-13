@@ -1,0 +1,2395 @@
+{
+  "schemaVersion": 1,
+  "kind": "nutrition",
+  "title": "Yoddha prep meals: pilot week (13-19 Oct), Aryan",
+  "planKey": "yoddha_prep_nutrition",
+  "versionNote": "Pilot week, approved 13 Oct 2026. Fully vegetarian and egg-free (festival to 20 Oct; Mon/Thu vegetarian).",
+  "status": "approved",
+  "startDate": "2026-10-13",
+  "endDate": "2026-10-19",
+  "assumptions": [
+    "Aryan's diet rules are the same as Chinmay's (vegetarian Mon/Thu and 11-20 Oct). His egg rule is unknown, so eggs are excluded; every day 13-19 Oct is vegetarian and egg-free.",
+    "Protein powder is already purchased. It's priced at an estimate (₹2,500/kg) because the format can't exclude a food from the budget, so the app's daily cost includes it.",
+    "A spice allowance of about ₹10/day (salt, spices, ginger, garlic, chilli, lemon, coriander) isn't in the app's cost.",
+    "Vegetable and fruit prices are Mumbai aggregator prices from 12 Oct; packaged goods are DMart / BigBasket listings from 13 Oct. Check against your own shop.",
+    "Energy targets are estimates; calibrate with the weekly body-weight trend."
+  ],
+  "athlete": "aryan",
+  "budgetInrPerDay": 250,
+  "targets": {
+    "kcal": [
+      2700,
+      3250
+    ],
+    "proteinG": [
+      125,
+      145
+    ],
+    "carbsG": [
+      310,
+      500
+    ],
+    "fatG": [
+      60,
+      90
+    ],
+    "fibreG": [
+      35,
+      60
+    ],
+    "fluidNote": "About 3.5 L a day as a starting point, more on hot days; pale-yellow urine is the check. 400-750 ml in the 2-4 h before training; sip 400-800 ml per hour during. After a sweaty session replace about 1.25-1.5 L per kg lost, with salt (salted food or ORS). Weighing more after a session than before means you drank too much.",
+    "rationale": "Mifflin-St Jeor resting energy about 1,760 kcal x activity 1.7-1.85 (evening training + some morning runs). Training days 2,950-3,250 kcal and carbs 385-500 g; rest days 2,700-2,950 kcal and carbs 310-440 g. Protein 1.6-1.9 g/kg (ISSN 1.4-2.0). No deficit: calibrate with the weekly body-weight trend."
+  },
+  "foods": [
+    {
+      "key": "poha_thick",
+      "name": "Poha, thick",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 353.7,
+        "proteinG": 7.44,
+        "carbsG": 76.75,
+        "fatG": 1.14,
+        "fibreG": 3.46
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup",
+          "grams": 60
+        }
+      ],
+      "source": "IFCT 2017 A011",
+      "isEstimate": false
+    },
+    {
+      "key": "potato",
+      "name": "Potato",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 69.8,
+        "proteinG": 1.54,
+        "carbsG": 14.89,
+        "fatG": 0.23,
+        "fibreG": 1.71
+      },
+      "householdMeasures": [
+        {
+          "label": "1 medium potato",
+          "grams": 120
+        }
+      ],
+      "source": "IFCT 2017 F006",
+      "isEstimate": false
+    },
+    {
+      "key": "onion",
+      "name": "Onion",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 48.0,
+        "proteinG": 1.5,
+        "carbsG": 9.56,
+        "fatG": 0.24,
+        "fibreG": 2.45
+      },
+      "householdMeasures": [
+        {
+          "label": "1 medium onion",
+          "grams": 100
+        }
+      ],
+      "source": "IFCT 2017 G017",
+      "isEstimate": false
+    },
+    {
+      "key": "green_peas_frozen",
+      "name": "Green peas, frozen",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 81.3,
+        "proteinG": 7.25,
+        "carbsG": 11.88,
+        "fatG": 0.13,
+        "fibreG": 6.32
+      },
+      "householdMeasures": [
+        {
+          "label": "1 tbsp",
+          "grams": 10
+        }
+      ],
+      "source": "IFCT 2017 D061 fresh green peas, used as a proxy for frozen peas",
+      "isEstimate": true
+    },
+    {
+      "key": "peanuts_raw",
+      "name": "Peanuts, raw",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 520.1,
+        "proteinG": 23.65,
+        "carbsG": 17.27,
+        "fatG": 39.63,
+        "fibreG": 10.38
+      },
+      "householdMeasures": [
+        {
+          "label": "1 tbsp",
+          "grams": 9
+        }
+      ],
+      "source": "IFCT 2017 H012",
+      "isEstimate": false
+    },
+    {
+      "key": "cooking_oil",
+      "name": "Cooking oil (groundnut or sunflower)",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 884,
+        "proteinG": 0.0,
+        "carbsG": 0.0,
+        "fatG": 100.0,
+        "fibreG": 0.0
+      },
+      "householdMeasures": [
+        {
+          "label": "1 tsp",
+          "grams": 4.5
+        }
+      ],
+      "source": "USDA FDC 171410",
+      "isEstimate": false
+    },
+    {
+      "key": "dahi_toned",
+      "name": "Dahi (toned milk)",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 61.5,
+        "proteinG": 4.0,
+        "carbsG": 4.4,
+        "fatG": 3.1,
+        "fibreG": 0.0
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori",
+          "grams": 150
+        }
+      ],
+      "source": "Amul Masti Dahi label (toned milk, fat 3.1%). Fibre 0: dairy contains no dietary fibre (USDA yogurt 171284 = 0).",
+      "isEstimate": false
+    },
+    {
+      "key": "atta_whole_wheat",
+      "name": "Whole wheat atta",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 320.3,
+        "proteinG": 10.57,
+        "carbsG": 64.17,
+        "fatG": 1.53,
+        "fibreG": 11.36
+      },
+      "householdMeasures": [
+        {
+          "label": "1 roti (dough)",
+          "grams": 30
+        }
+      ],
+      "source": "IFCT 2017 A019",
+      "isEstimate": false
+    },
+    {
+      "key": "rice_white_raw",
+      "name": "White rice, raw (sona masoori / kolam)",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 356.4,
+        "proteinG": 7.94,
+        "carbsG": 78.24,
+        "fatG": 0.52,
+        "fibreG": 2.81
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori cooked rice (about 50 g raw)",
+          "grams": 50
+        }
+      ],
+      "source": "IFCT 2017 A015",
+      "isEstimate": false
+    },
+    {
+      "key": "moong_dal_yellow",
+      "name": "Moong dal, yellow",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 325.8,
+        "proteinG": 23.88,
+        "carbsG": 52.59,
+        "fatG": 1.35,
+        "fibreG": 9.37
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori cooked dal (about 35 g raw)",
+          "grams": 35
+        }
+      ],
+      "source": "IFCT 2017 B010",
+      "isEstimate": false
+    },
+    {
+      "key": "bhindi_okra",
+      "name": "Bhindi / okra",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 27.5,
+        "proteinG": 2.08,
+        "carbsG": 3.62,
+        "fatG": 0.22,
+        "fibreG": 4.08
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori chopped",
+          "grams": 75
+        }
+      ],
+      "source": "IFCT 2017 D056",
+      "isEstimate": false
+    },
+    {
+      "key": "tomato",
+      "name": "Tomato",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 18.9,
+        "proteinG": 0.76,
+        "carbsG": 3.2,
+        "fatG": 0.25,
+        "fibreG": 1.58
+      },
+      "householdMeasures": [
+        {
+          "label": "1 medium tomato",
+          "grams": 90
+        }
+      ],
+      "source": "IFCT 2017 D075",
+      "isEstimate": false
+    },
+    {
+      "key": "banana",
+      "name": "Banana, ripe (edible part)",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 105.2,
+        "proteinG": 1.23,
+        "carbsG": 23.63,
+        "fatG": 0.33,
+        "fibreG": 1.94
+      },
+      "householdMeasures": [
+        {
+          "label": "1 medium banana (edible part)",
+          "grams": 120
+        }
+      ],
+      "source": "IFCT 2017 E012",
+      "isEstimate": false
+    },
+    {
+      "key": "toned_milk",
+      "name": "Toned milk",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 56.3,
+        "proteinG": 2.91,
+        "carbsG": 4.56,
+        "fatG": 2.91,
+        "fibreG": 0.0
+      },
+      "householdMeasures": [
+        {
+          "label": "1 glass (250 ml)",
+          "grams": 258
+        }
+      ],
+      "source": "Amul Taaza label per 100 ml (58 kcal, P 3.0, C 4.7, F 3.0), converted to per 100 g at 1.031 g/ml",
+      "isEstimate": false
+    },
+    {
+      "key": "whey_protein",
+      "name": "Whey protein (Aryan's)",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 400.0,
+        "proteinG": 80.0,
+        "carbsG": 10.0,
+        "fatG": 5.0,
+        "fibreG": 0.0
+      },
+      "householdMeasures": [
+        {
+          "label": "1 scoop (estimated)",
+          "grams": 30
+        }
+      ],
+      "source": "ESTIMATE for a typical whey concentrate (about 24 g protein per 30 g scoop; fibre 0, as whey contains none). Replace with Aryan's label.",
+      "isEstimate": true
+    },
+    {
+      "key": "soy_chunks_dry",
+      "name": "Soy chunks, dry",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 345,
+        "proteinG": 52.0,
+        "carbsG": 20.0,
+        "fatG": 0.67,
+        "fibreG": 13.3
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup dry",
+          "grams": 45
+        }
+      ],
+      "source": "Nutrela soya chunks label via Open Food Facts 8906032016977. Carbs = label total 33.3 g minus fibre 13.3 g. Moderate confidence: check your pack.",
+      "isEstimate": true
+    },
+    {
+      "key": "ghee",
+      "name": "Ghee",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 876,
+        "proteinG": 0.28,
+        "carbsG": 0.0,
+        "fatG": 99.48,
+        "fibreG": 0.0
+      },
+      "householdMeasures": [
+        {
+          "label": "1 tsp",
+          "grams": 4.5
+        }
+      ],
+      "source": "USDA FDC 173412",
+      "isEstimate": false
+    },
+    {
+      "key": "cucumber",
+      "name": "Cucumber",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 19.6,
+        "proteinG": 0.71,
+        "carbsG": 3.48,
+        "fatG": 0.16,
+        "fibreG": 2.14
+      },
+      "householdMeasures": [
+        {
+          "label": "1 medium cucumber",
+          "grams": 200
+        }
+      ],
+      "source": "IFCT 2017 D043",
+      "isEstimate": false
+    },
+    {
+      "key": "besan",
+      "name": "Besan",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 387,
+        "proteinG": 22.39,
+        "carbsG": 47.02,
+        "fatG": 6.69,
+        "fibreG": 10.8
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup",
+          "grams": 92
+        }
+      ],
+      "source": "USDA FDC 174288",
+      "isEstimate": false
+    },
+    {
+      "key": "palak_spinach",
+      "name": "Palak / spinach",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 24.4,
+        "proteinG": 2.14,
+        "carbsG": 2.05,
+        "fatG": 0.64,
+        "fibreG": 2.38
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup chopped",
+          "grams": 30
+        }
+      ],
+      "source": "IFCT 2017 C033",
+      "isEstimate": false
+    },
+    {
+      "key": "rajma_dry",
+      "name": "Rajma, dry",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 299.2,
+        "proteinG": 19.91,
+        "carbsG": 48.61,
+        "fatG": 1.77,
+        "fibreG": 16.57
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup dry",
+          "grams": 185
+        }
+      ],
+      "source": "IFCT 2017 B020",
+      "isEstimate": false
+    },
+    {
+      "key": "papaya",
+      "name": "Papaya, ripe (edible part)",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 23.9,
+        "proteinG": 0.42,
+        "carbsG": 4.61,
+        "fatG": 0.16,
+        "fibreG": 2.83
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori cubes",
+          "grams": 150
+        }
+      ],
+      "source": "IFCT 2017 E049",
+      "isEstimate": false
+    },
+    {
+      "key": "paneer_full_fat",
+      "name": "Paneer, full fat",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 323,
+        "proteinG": 20.0,
+        "carbsG": 4.5,
+        "fatG": 25.0,
+        "fibreG": 0.0
+      },
+      "householdMeasures": [
+        {
+          "label": "200 g pack",
+          "grams": 200
+        }
+      ],
+      "source": "Amul Malai Paneer label; fibre 'not a significant source', taken as 0",
+      "isEstimate": false
+    },
+    {
+      "key": "toor_dal",
+      "name": "Toor dal",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 330.8,
+        "proteinG": 21.7,
+        "carbsG": 55.23,
+        "fatG": 1.56,
+        "fibreG": 9.06
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori cooked dal (about 35 g raw)",
+          "grams": 35
+        }
+      ],
+      "source": "IFCT 2017 B021",
+      "isEstimate": false
+    },
+    {
+      "key": "sooji_rava",
+      "name": "Sooji / rava",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 333.7,
+        "proteinG": 11.38,
+        "carbsG": 68.43,
+        "fatG": 0.74,
+        "fibreG": 9.72
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup",
+          "grams": 165
+        }
+      ],
+      "source": "IFCT 2017 A022",
+      "isEstimate": false
+    },
+    {
+      "key": "carrot",
+      "name": "Carrot",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 33.2,
+        "proteinG": 0.95,
+        "carbsG": 5.55,
+        "fatG": 0.47,
+        "fibreG": 4.18
+      },
+      "householdMeasures": [
+        {
+          "label": "1 medium carrot",
+          "grams": 70
+        }
+      ],
+      "source": "IFCT 2017 F002",
+      "isEstimate": false
+    },
+    {
+      "key": "kabuli_chana_dry",
+      "name": "Kabuli chana, dry",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 378,
+        "proteinG": 20.47,
+        "carbsG": 50.75,
+        "fatG": 6.04,
+        "fibreG": 12.2
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup dry",
+          "grams": 190
+        }
+      ],
+      "source": "USDA FDC 173756",
+      "isEstimate": false
+    },
+    {
+      "key": "masoor_dal",
+      "name": "Masoor dal",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 322.4,
+        "proteinG": 24.35,
+        "carbsG": 52.53,
+        "fatG": 0.75,
+        "fibreG": 10.43
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori cooked dal (about 35 g raw)",
+          "grams": 35
+        }
+      ],
+      "source": "IFCT 2017 B013",
+      "isEstimate": false
+    },
+    {
+      "key": "cauliflower",
+      "name": "Cauliflower",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 22.9,
+        "proteinG": 2.15,
+        "carbsG": 2.03,
+        "fatG": 0.44,
+        "fibreG": 3.71
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori florets",
+          "grams": 75
+        }
+      ],
+      "source": "IFCT 2017 D036",
+      "isEstimate": false
+    },
+    {
+      "key": "oats_rolled",
+      "name": "Rolled oats",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 379,
+        "proteinG": 13.15,
+        "carbsG": 57.6,
+        "fatG": 6.52,
+        "fibreG": 10.1
+      },
+      "householdMeasures": [
+        {
+          "label": "1 cup",
+          "grams": 85
+        }
+      ],
+      "source": "USDA FDC 173904",
+      "isEstimate": false
+    },
+    {
+      "key": "jaggery",
+      "name": "Jaggery",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 353.7,
+        "proteinG": 1.85,
+        "carbsG": 84.87,
+        "fatG": 0.16,
+        "fibreG": null
+      },
+      "householdMeasures": [
+        {
+          "label": "1 tsp",
+          "grams": 5
+        }
+      ],
+      "source": "IFCT 2017 I001 (fibre not given in IFCT)",
+      "isEstimate": false
+    },
+    {
+      "key": "cabbage",
+      "name": "Cabbage",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 21.5,
+        "proteinG": 1.36,
+        "carbsG": 3.25,
+        "fatG": 0.12,
+        "fibreG": 2.76
+      },
+      "householdMeasures": [
+        {
+          "label": "1 katori chopped",
+          "grams": 75
+        }
+      ],
+      "source": "IFCT 2017 C015",
+      "isEstimate": false
+    },
+    {
+      "key": "urad_dal_split",
+      "name": "Urad dal, split",
+      "dietTag": "veg",
+      "per100g": {
+        "kcal": 324.1,
+        "proteinG": 23.06,
+        "carbsG": 51.0,
+        "fatG": 1.69,
+        "fibreG": 11.93
+      },
+      "householdMeasures": [],
+      "source": "IFCT 2017 B003",
+      "isEstimate": false
+    }
+  ],
+  "prices": [
+    {
+      "foodKey": "poha_thick",
+      "priceInr": 75,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Premia Poha 1 kg ₹75",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "potato",
+      "priceInr": 60.0,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹51/kg as bought / 0.85 edible yield (yield estimated). Mumbai retail ₹43-51/kg (vegetablemarketprice, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "onion",
+      "priceInr": 94.44,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹85/kg as bought / 0.9 edible yield (yield estimated). Mumbai retail ₹77-91/kg (aggregators, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "green_peas_frozen",
+      "priceInr": 204,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "BigBasket Safal frozen peas 1 kg ₹204",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "peanuts_raw",
+      "priceInr": 198,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Premia Groundnut 1 kg ₹198",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "cooking_oil",
+      "priceInr": 234,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Dhara groundnut 910 g (1 L) ₹213",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "dahi_toned",
+      "priceInr": 77,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "BigBasket Amul Masti Dahi 1 kg pouch ₹77",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "atta_whole_wheat",
+      "priceInr": 42,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Pillsbury Chakki Fresh 10 kg ₹419",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "rice_white_raw",
+      "priceInr": 79,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Premia Wada Kolam 5 kg ₹395",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "moong_dal_yellow",
+      "priceInr": 118,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Swaad Moong Dal 1 kg ₹118",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "bhindi_okra",
+      "priceInr": 48.89,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹44/kg as bought / 0.9 edible yield (yield estimated). Mumbai retail ₹37-44/kg (todaypricerates, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "tomato",
+      "priceInr": 56.7,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹55/kg as bought / 0.97 edible yield (yield estimated). Mumbai retail ₹42-62/kg (aggregators, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "banana",
+      "priceInr": 100.0,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹65/kg as bought / 0.65 edible yield (yield estimated). Mumbai retail ₹58-65/kg (todaypricerates, 12 Oct); peel ~35% (est.)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "toned_milk",
+      "priceInr": 58,
+      "perQty": 1,
+      "unit": "l",
+      "gramsPerUnit": 1031,
+      "asOf": "2026-10-13",
+      "source": "Amul Taaza toned milk, ₹29 per 500 ml (MRP from 14 May 2026)",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "whey_protein",
+      "priceInr": 2500,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "ESTIMATE: Aryan's price unknown, assumed the same as Chinmay's powder. Already purchased. Replace with the real price.",
+      "isEstimate": true,
+      "excludeFromBudget": true
+    },
+    {
+      "foodKey": "soy_chunks_dry",
+      "priceInr": 129,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "BigBasket Nutrela 1 kg ₹129 (200 g packs cost ₹210-245/kg)",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "ghee",
+      "priceInr": 740,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Amul Cow Ghee 905 g ₹670",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "cucumber",
+      "priceInr": 44.44,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹40/kg as bought / 0.9 edible yield (yield estimated). Mumbai retail ₹32-43/kg (aggregators, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "besan",
+      "priceInr": 109,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Fortune Besan 1 kg ₹109",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "palak_spinach",
+      "priceInr": 66.67,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹50/kg as bought / 0.75 edible yield (yield estimated). BigBasket palak 500 g ₹25.21 (₹50/kg), used as a conservative price; Mumbai market aggregators show ₹20-26/kg",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "rajma_dry",
+      "priceInr": 112,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Rajma Red Small 500 g ₹56",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "papaya",
+      "priceInr": 107.14,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹75/kg as bought / 0.7 edible yield (yield estimated). Mumbai ₹75/kg (oneindia, 12 Oct); peel/seeds ~30% (est.)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "paneer_full_fat",
+      "priceInr": 420,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Amul Fresh Paneer 200 g ₹84",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "toor_dal",
+      "priceInr": 145,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Swaad Toor Dal 1 kg ₹145",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "sooji_rava",
+      "priceInr": 54,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Rava 1 kg ₹54",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "carrot",
+      "priceInr": 63.33,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹57/kg as bought / 0.9 edible yield (yield estimated). Mumbai retail ₹48-57/kg (todaypricerates, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "kabuli_chana_dry",
+      "priceInr": 95,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Premia Kabuli Chana 1 kg ₹95",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "masoor_dal",
+      "priceInr": 105,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Masoor Dal 1 kg ₹105",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "cauliflower",
+      "priceInr": 74.67,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹56/kg as bought / 0.75 edible yield (yield estimated). Mumbai retail ₹47-56/kg (todaypricerates, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "oats_rolled",
+      "priceInr": 130,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "BigBasket Saffola rolled oats 1 kg ₹129.50",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "jaggery",
+      "priceInr": 93,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Jaggery 900 g ₹84",
+      "isEstimate": false
+    },
+    {
+      "foodKey": "cabbage",
+      "priceInr": 52.94,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-12",
+      "source": "Per kg of edible part: ₹45/kg as bought / 0.85 edible yield (yield estimated). Mumbai retail ₹31-51/kg (aggregators, 12 Oct)",
+      "isEstimate": true
+    },
+    {
+      "foodKey": "urad_dal_split",
+      "priceInr": 152,
+      "perQty": 1,
+      "unit": "kg",
+      "asOf": "2026-10-13",
+      "source": "DMart Swaad Urad Dal 1 kg ₹152",
+      "isEstimate": false
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-10-13",
+      "meals": [
+        {
+          "type": "breakfast",
+          "time": "09:30",
+          "name": "Kanda-batata poha + dahi",
+          "items": [
+            {
+              "foodKey": "poha_thick",
+              "grams": 90,
+              "household": "1½ cups"
+            },
+            {
+              "foodKey": "potato",
+              "grams": 60,
+              "household": "½ medium potato"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 20,
+              "household": "2 tbsp"
+            },
+            {
+              "foodKey": "peanuts_raw",
+              "grams": 15,
+              "household": "1⅔ tbsp"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 10,
+              "household": "2¼ tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "Rinse poha, drain 5 min. Temper mustard seeds and curry leaves in oil, add onion, diced potato and peas, cook till potato is soft, add peanuts, turmeric and salt, fold in poha, steam 2 min. Lemon on top.",
+          "substitutions": [
+            "Sooji upma or oats instead of poha."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "13:30",
+          "name": "Roti + rice + moong dal + bhindi sabzi (packed)",
+          "items": [
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "moong_dal_yellow",
+              "grams": 50,
+              "household": "1½ katori cooked dal"
+            },
+            {
+              "foodKey": "bhindi_okra",
+              "grams": 120,
+              "household": "1⅔ katori chopped"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 40,
+              "household": "½ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 13,
+              "household": "3 tsp"
+            }
+          ],
+          "prep": "Pressure-cook dal 3 whistles; tadka with onion, tomato, jeera. Bhindi: dry-fry sliced okra, then masala.",
+          "substitutions": [
+            "Any seasonal sabzi (cabbage, gobi) for bhindi; masoor or toor for moong."
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "17:30",
+          "name": "Glass of milk + banana",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 120,
+              "household": "1 medium banana"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "substitutions": [
+            "Papaya (200 g) for the banana."
+          ]
+        },
+        {
+          "type": "pre_workout",
+          "time": "20:00",
+          "name": "2 bananas",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 240,
+              "household": "2 medium bananas"
+            }
+          ],
+          "prep": "Eat 60-75 min before the 9 pm session.",
+          "substitutions": [
+            "Poha (40 g) with jaggery."
+          ]
+        },
+        {
+          "type": "post_workout",
+          "time": "22:35",
+          "name": "Whey shake with milk",
+          "items": [
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "dinner",
+          "time": "23:15",
+          "name": "Rice + soy chunk curry + cucumber raita",
+          "items": [
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 145,
+              "household": "3 katori cooked"
+            },
+            {
+              "foodKey": "soy_chunks_dry",
+              "grams": 35,
+              "household": "¾ cup dry"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 50,
+              "household": "½ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 80,
+              "household": "1 medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "ghee",
+              "grams": 5,
+              "household": "1 tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            },
+            {
+              "foodKey": "cucumber",
+              "grams": 100,
+              "household": "½ medium cucumber"
+            }
+          ],
+          "prep": "Boil soy chunks 5 min, squeeze out water. Onion-tomato masala, add chunks and simmer 10 min. Raita: dahi + grated cucumber + roasted jeera.",
+          "substitutions": [
+            "Rajma or chole for soy (use 55 g dry)."
+          ]
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 3238,
+        "proteinG": 131.1,
+        "carbsG": 488.1,
+        "fatG": 77.7,
+        "fibreG": 52.7,
+        "costInr": 252
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "meals": [
+        {
+          "type": "breakfast",
+          "time": "09:30",
+          "name": "Besan chilla (3) + dahi",
+          "items": [
+            {
+              "foodKey": "besan",
+              "grams": 85,
+              "household": "1 cup"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 40,
+              "household": "½ medium tomato"
+            },
+            {
+              "foodKey": "palak_spinach",
+              "grams": 30,
+              "household": "1 cup chopped"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "Whisk besan with water to a pouring batter, add chopped onion, tomato, palak, ajwain, salt. Cook thin chillas on a tawa with a little oil.",
+          "substitutions": [
+            "Moong dal chilla (soaked moong dal, ground)."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "13:30",
+          "name": "Rajma-chawal + salad (packed)",
+          "items": [
+            {
+              "foodKey": "rajma_dry",
+              "grams": 55,
+              "household": "⅓ cup dry"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 150,
+              "household": "3 katori cooked"
+            },
+            {
+              "foodKey": "cucumber",
+              "grams": 80,
+              "household": "⅓ medium cucumber"
+            }
+          ],
+          "prep": "Soak rajma overnight (Tue night). Pressure-cook 6-7 whistles, then simmer in onion-tomato masala.",
+          "substitutions": [
+            "Kabuli chana or whole moong for rajma."
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "17:30",
+          "name": "Glass of milk + papaya",
+          "items": [
+            {
+              "foodKey": "papaya",
+              "grams": 200,
+              "household": "1⅓ katori cubes"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "substitutions": [
+            "Guava."
+          ]
+        },
+        {
+          "type": "pre_workout",
+          "time": "20:00",
+          "name": "2 bananas",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 240,
+              "household": "2 medium bananas"
+            }
+          ],
+          "substitutions": [
+            "Poha (40 g) with jaggery."
+          ]
+        },
+        {
+          "type": "post_workout",
+          "time": "22:35",
+          "name": "Whey shake with milk",
+          "items": [
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "dinner",
+          "time": "23:15",
+          "name": "Roti + rice + matar paneer + toor dal",
+          "items": [
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "paneer_full_fat",
+              "grams": 70,
+              "household": "about 0.35 of a 200 g pack"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 30,
+              "household": "3 tbsp"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 9,
+              "household": "2 tsp"
+            },
+            {
+              "foodKey": "toor_dal",
+              "grams": 20,
+              "household": "½ katori cooked dal"
+            }
+          ],
+          "prep": "Matar paneer in onion-tomato gravy. Plain toor dal with a simple tadka.",
+          "substitutions": [
+            "Soy chunks (35 g dry) for paneer to save about ₹20."
+          ]
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 3060,
+        "proteinG": 130.8,
+        "carbsG": 430.3,
+        "fatG": 81.4,
+        "fibreG": 57.7,
+        "costInr": 268
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "meals": [
+        {
+          "type": "breakfast",
+          "time": "09:30",
+          "name": "Vegetable upma + dahi",
+          "items": [
+            {
+              "foodKey": "sooji_rava",
+              "grams": 90,
+              "household": "½ cup"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "carrot",
+              "grams": 40,
+              "household": "½ medium carrot"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 20,
+              "household": "2 tbsp"
+            },
+            {
+              "foodKey": "peanuts_raw",
+              "grams": 10,
+              "household": "1 tbsp"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "Dry-roast sooji. Temper mustard, curry leaves, onion, carrot, peas in oil; add 2.5x water, salt, boil, stir in sooji.",
+          "substitutions": [
+            "Poha."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "13:30",
+          "name": "Chole + roti + rice + salad + dahi (packed)",
+          "items": [
+            {
+              "foodKey": "kabuli_chana_dry",
+              "grams": 60,
+              "household": "⅓ cup dry"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "cucumber",
+              "grams": 80,
+              "household": "⅓ medium cucumber"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "Soak chana overnight (Wed night); pressure-cook 5-6 whistles; chole masala.",
+          "substitutions": [
+            "Rajma."
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "17:30",
+          "name": "Glass of milk",
+          "items": [
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ]
+        },
+        {
+          "type": "pre_workout",
+          "time": "20:00",
+          "name": "2 bananas",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 240,
+              "household": "2 medium bananas"
+            }
+          ]
+        },
+        {
+          "type": "post_workout",
+          "time": "22:35",
+          "name": "Whey shake with milk",
+          "items": [
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "dinner",
+          "time": "23:15",
+          "name": "Rice + masoor dal + aloo-gobi + dahi",
+          "items": [
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 145,
+              "household": "3 katori cooked"
+            },
+            {
+              "foodKey": "masoor_dal",
+              "grams": 40,
+              "household": "1¼ katori cooked dal"
+            },
+            {
+              "foodKey": "cauliflower",
+              "grams": 100,
+              "household": "1⅓ katori florets"
+            },
+            {
+              "foodKey": "potato",
+              "grams": 80,
+              "household": "⅔ medium potato"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 40,
+              "household": "½ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 13,
+              "household": "3 tsp"
+            },
+            {
+              "foodKey": "ghee",
+              "grams": 5,
+              "household": "1 tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 100,
+              "household": "⅔ katori"
+            }
+          ],
+          "prep": "Masoor cooks in 2 whistles. Aloo-gobi dry sabzi.",
+          "substitutions": [
+            "Cabbage-peas for aloo-gobi."
+          ]
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 3196,
+        "proteinG": 127.2,
+        "carbsG": 470.7,
+        "fatG": 82.3,
+        "fibreG": 56.5,
+        "costInr": 243
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "meals": [
+        {
+          "type": "breakfast",
+          "time": "09:30",
+          "name": "Masala oats + dahi",
+          "items": [
+            {
+              "foodKey": "oats_rolled",
+              "grams": 80,
+              "household": "1 cup"
+            },
+            {
+              "foodKey": "carrot",
+              "grams": 40,
+              "household": "½ medium carrot"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 20,
+              "household": "2 tbsp"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "peanuts_raw",
+              "grams": 15,
+              "household": "1⅔ tbsp"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 9,
+              "household": "2 tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "Saute onion, carrot, peas in oil with spices, add oats and 2 cups water, cook 4-5 min.",
+          "substitutions": [
+            "Upma or poha."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "13:30",
+          "name": "Roti + rice + soya-matar sabzi + moong dal (packed)",
+          "items": [
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "soy_chunks_dry",
+              "grams": 25,
+              "household": "½ cup dry"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 30,
+              "household": "3 tbsp"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "moong_dal_yellow",
+              "grams": 25,
+              "household": "¾ katori cooked dal"
+            }
+          ],
+          "prep": "Soak/boil soy, squeeze, cook with peas in onion-tomato masala.",
+          "substitutions": [
+            "Paneer bhurji (60 g) for soy."
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "17:30",
+          "name": "Glass of milk + papaya",
+          "items": [
+            {
+              "foodKey": "papaya",
+              "grams": 200,
+              "household": "1⅓ katori cubes"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "substitutions": [
+            "Guava."
+          ]
+        },
+        {
+          "type": "pre_workout",
+          "time": "20:00",
+          "name": "2 bananas + 2 tsp jaggery",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 240,
+              "household": "2 medium bananas"
+            },
+            {
+              "foodKey": "jaggery",
+              "grams": 10,
+              "household": "2 tsp"
+            }
+          ],
+          "prep": "Test day: a little extra carbohydrate."
+        },
+        {
+          "type": "post_workout",
+          "time": "22:40",
+          "name": "Whey shake with milk",
+          "items": [
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "dinner",
+          "time": "23:15",
+          "name": "Moong dal khichdi + cabbage sabzi + dahi",
+          "items": [
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 125,
+              "household": "2½ katori cooked"
+            },
+            {
+              "foodKey": "moong_dal_yellow",
+              "grams": 50,
+              "household": "1½ katori cooked dal"
+            },
+            {
+              "foodKey": "ghee",
+              "grams": 7,
+              "household": "1½ tsp"
+            },
+            {
+              "foodKey": "cabbage",
+              "grams": 120,
+              "household": "1⅔ katori chopped"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 9,
+              "household": "2 tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "Rice + moong dal 1:1 with 4x water, pressure-cook 3 whistles, ghee-jeera tadka.",
+          "substitutions": [
+            "Masoor for moong."
+          ]
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 3063,
+        "proteinG": 132.5,
+        "carbsG": 436.1,
+        "fatG": 78.5,
+        "fibreG": 58.1,
+        "costInr": 259
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "meals": [
+        {
+          "type": "breakfast",
+          "time": "10:00",
+          "name": "Idli (6) + sambar + ghee + glass of milk",
+          "items": [
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 105,
+              "household": "2 katori cooked"
+            },
+            {
+              "foodKey": "urad_dal_split",
+              "grams": 35,
+              "household": "dry, for the batter"
+            },
+            {
+              "foodKey": "toor_dal",
+              "grams": 30,
+              "household": "¾ katori cooked dal"
+            },
+            {
+              "foodKey": "carrot",
+              "grams": 30,
+              "household": "½ medium carrot"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 40,
+              "household": "½ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 6,
+              "household": "1⅓ tsp"
+            },
+            {
+              "foodKey": "ghee",
+              "grams": 5,
+              "household": "1 tsp"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "Home batter: 3 parts rice to 1 part urad, soak 5 h on Friday, grind, ferment overnight. Sambar: toor dal + veg + sambar masala.",
+          "substitutions": [
+            "Ready batter (about ₹94/kg), or poha."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "14:00",
+          "name": "Veg pulao + masoor dal + raita",
+          "items": [
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 105,
+              "household": "2 katori cooked"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 30,
+              "household": "3 tbsp"
+            },
+            {
+              "foodKey": "carrot",
+              "grams": 40,
+              "household": "½ medium carrot"
+            },
+            {
+              "foodKey": "potato",
+              "grams": 50,
+              "household": "½ medium potato"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 15,
+              "household": "3⅓ tsp"
+            },
+            {
+              "foodKey": "masoor_dal",
+              "grams": 40,
+              "household": "1¼ katori cooked dal"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "18:00",
+          "name": "Whey shake with milk",
+          "items": [
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            },
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "dinner",
+          "time": "20:30",
+          "name": "Roti + rice + soy chunk sabzi + palak moong dal (early dinner)",
+          "items": [
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "soy_chunks_dry",
+              "grams": 35,
+              "household": "¾ cup dry"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "moong_dal_yellow",
+              "grams": 30,
+              "household": "¾ katori cooked dal"
+            },
+            {
+              "foodKey": "palak_spinach",
+              "grams": 80,
+              "household": "2⅔ cups chopped"
+            }
+          ],
+          "prep": "Early dinner so you can be asleep by about 1 am before Sunday's run."
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 2839,
+        "proteinG": 134.4,
+        "carbsG": 415.3,
+        "fatG": 64.6,
+        "fibreG": 49.5,
+        "costInr": 209
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "meals": [
+        {
+          "type": "pre_workout",
+          "time": "07:30",
+          "name": "1 banana before the run",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 120,
+              "household": "1 medium banana"
+            }
+          ],
+          "prep": "300-400 ml water on waking."
+        },
+        {
+          "type": "post_workout",
+          "time": "09:00",
+          "name": "Whey shake with milk after the run",
+          "items": [
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "breakfast",
+          "time": "09:30",
+          "name": "Moong dal chilla (3) + dahi + banana",
+          "items": [
+            {
+              "foodKey": "moong_dal_yellow",
+              "grams": 65,
+              "household": "dry dal, soaked and ground"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 30,
+              "household": "⅓ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            },
+            {
+              "foodKey": "banana",
+              "grams": 120,
+              "household": "1 medium banana"
+            }
+          ],
+          "prep": "Soak moong dal Sat night (4+ h), grind with ginger and chilli, add onion-tomato, cook like dosa.",
+          "substitutions": [
+            "Besan chilla."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "13:30",
+          "name": "Toor dal + rice + roti + bhindi",
+          "items": [
+            {
+              "foodKey": "toor_dal",
+              "grams": 40,
+              "household": "1¼ katori cooked dal"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 125,
+              "household": "2½ katori cooked"
+            },
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 70,
+              "household": "2⅓ rotis"
+            },
+            {
+              "foodKey": "bhindi_okra",
+              "grams": 120,
+              "household": "1⅔ katori chopped"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 30,
+              "household": "⅓ medium tomato"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 30,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 13,
+              "household": "3 tsp"
+            }
+          ],
+          "substitutions": [
+            "Any sabzi."
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "17:30",
+          "name": "Glass of milk + papaya + peanuts",
+          "items": [
+            {
+              "foodKey": "papaya",
+              "grams": 200,
+              "household": "1⅓ katori cubes"
+            },
+            {
+              "foodKey": "peanuts_raw",
+              "grams": 20,
+              "household": "2¼ tbsp"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ]
+        },
+        {
+          "type": "dinner",
+          "time": "20:30",
+          "name": "Roti + rice + paneer bhurji + salad (early dinner)",
+          "items": [
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "paneer_full_fat",
+              "grams": 70,
+              "household": "about 0.35 of a 200 g pack"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 50,
+              "household": "½ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 7,
+              "household": "1½ tsp"
+            },
+            {
+              "foodKey": "cucumber",
+              "grams": 100,
+              "household": "½ medium cucumber"
+            }
+          ],
+          "prep": "Crumble paneer into onion-tomato masala, 3-4 min. Early dinner = earlier bedtime tonight.",
+          "substitutions": [
+            "Soy bhurji (40 g dry soy) to save about ₹20."
+          ]
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 3081,
+        "proteinG": 130.3,
+        "carbsG": 437.3,
+        "fatG": 84.8,
+        "fibreG": 58.7,
+        "costInr": 265
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "meals": [
+        {
+          "type": "breakfast",
+          "time": "09:30",
+          "name": "Matar poha + dahi",
+          "items": [
+            {
+              "foodKey": "poha_thick",
+              "grams": 90,
+              "household": "1½ cups"
+            },
+            {
+              "foodKey": "green_peas_frozen",
+              "grams": 30,
+              "household": "3 tbsp"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "peanuts_raw",
+              "grams": 15,
+              "household": "1⅔ tbsp"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 10,
+              "household": "2¼ tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 150,
+              "household": "1 katori"
+            }
+          ],
+          "prep": "As Tuesday, with peas instead of potato.",
+          "substitutions": [
+            "Upma."
+          ]
+        },
+        {
+          "type": "lunch",
+          "time": "13:30",
+          "name": "Roti + rice + soya masala + toor dal (packed)",
+          "items": [
+            {
+              "foodKey": "atta_whole_wheat",
+              "grams": 105,
+              "household": "3½ rotis"
+            },
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 55,
+              "household": "1 katori cooked"
+            },
+            {
+              "foodKey": "soy_chunks_dry",
+              "grams": 30,
+              "household": "⅔ cup dry"
+            },
+            {
+              "foodKey": "onion",
+              "grams": 40,
+              "household": "⅓ medium onion"
+            },
+            {
+              "foodKey": "tomato",
+              "grams": 60,
+              "household": "⅔ medium tomato"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 11,
+              "household": "2½ tsp"
+            },
+            {
+              "foodKey": "toor_dal",
+              "grams": 30,
+              "household": "¾ katori cooked dal"
+            }
+          ],
+          "substitutions": [
+            "Chole for soy."
+          ]
+        },
+        {
+          "type": "snack",
+          "time": "17:30",
+          "name": "Glass of milk + papaya",
+          "items": [
+            {
+              "foodKey": "papaya",
+              "grams": 200,
+              "household": "1⅓ katori cubes"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ]
+        },
+        {
+          "type": "pre_workout",
+          "time": "20:00",
+          "name": "2 bananas",
+          "items": [
+            {
+              "foodKey": "banana",
+              "grams": 240,
+              "household": "2 medium bananas"
+            }
+          ]
+        },
+        {
+          "type": "post_workout",
+          "time": "22:35",
+          "name": "Whey shake with milk",
+          "items": [
+            {
+              "foodKey": "whey_protein",
+              "grams": 30,
+              "household": "1 scoop (about 30 g, check label)"
+            },
+            {
+              "foodKey": "toned_milk",
+              "grams": 258,
+              "household": "250 ml"
+            }
+          ],
+          "prep": "1 scoop whey in 250 ml toned milk."
+        },
+        {
+          "type": "dinner",
+          "time": "23:15",
+          "name": "Rice + palak moong dal + aloo-bhindi + dahi",
+          "items": [
+            {
+              "foodKey": "rice_white_raw",
+              "grams": 145,
+              "household": "3 katori cooked"
+            },
+            {
+              "foodKey": "moong_dal_yellow",
+              "grams": 40,
+              "household": "1¼ katori cooked dal"
+            },
+            {
+              "foodKey": "palak_spinach",
+              "grams": 100,
+              "household": "3⅓ cups chopped"
+            },
+            {
+              "foodKey": "potato",
+              "grams": 60,
+              "household": "½ medium potato"
+            },
+            {
+              "foodKey": "bhindi_okra",
+              "grams": 80,
+              "household": "1 katori chopped"
+            },
+            {
+              "foodKey": "cooking_oil",
+              "grams": 13,
+              "household": "3 tsp"
+            },
+            {
+              "foodKey": "ghee",
+              "grams": 5,
+              "household": "1 tsp"
+            },
+            {
+              "foodKey": "dahi_toned",
+              "grams": 100,
+              "household": "⅔ katori"
+            }
+          ]
+        }
+      ],
+      "expectedTotals": {
+        "kcal": 3150,
+        "proteinG": 130.3,
+        "carbsG": 469.6,
+        "fatG": 76.5,
+        "fibreG": 54.5,
+        "costInr": 255
+      }
+    }
+  ]
+}

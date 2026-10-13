@@ -1,6 +1,6 @@
 # Yoddha Prep — Plan Import Format, `schemaVersion: 1`
 
-**Status:** final for schemaVersion 1, approved 2026-10-13.
+**Status:** final for schemaVersion 1, approved 2026-10-13. Amended the same day to add the optional Price field `excludeFromBudget` (§4.3), which is backward-compatible.
 
 **For:** anyone, or any tool, that writes training or nutrition plans outside the app and imports them as JSON.
 
@@ -209,10 +209,15 @@ Additional top-level fields:
 | `asOf` | date | required | The date the price was seen. Use a date on or before `startDate`. |
 | `source` | text ≤ 300 | required | e.g. `"BigBasket, 12 Oct 2026"` or `"Estimate"`. |
 | `isEstimate` | boolean | required | |
+| `excludeFromBudget` | boolean | optional | Default `false`. `true` means this food's cost still appears in the day's cost breakdown, but it's **left out of the `budgetInrPerDay` comparison**. Use it for food that's already paid for, e.g. a protein powder bought in advance. |
 
 **How cost is computed:**
 - Price per gram = `priceInr ÷ (perQty × g-per-unit)`, where g-per-unit is 1 for `g`, 1,000 for `kg`, and `gramsPerUnit` for the other units.
 - For each day, the app uses the most recent price with `asOf` on or before that date, from this file or an earlier import. If there's none, it uses the earliest later price.
+  - That chosen price also decides whether the item counts toward the budget (its `excludeFromBudget`).
+- **Each day gets two totals:**
+  - **Day cost:** every priced item, including excluded ones. It's shown with a per-item breakdown in which excluded items are marked.
+  - **Budget cost:** the day cost minus excluded items. Only this is compared with `budgetInrPerDay`.
 - **A day with any unpriced item has an "incomplete" cost, never ₹0.**
 - Costs are shown **rounded up** to the whole rupee.
 
@@ -225,6 +230,7 @@ Additional top-level fields:
 | `expectedTotals` | ExpectedTotals | optional | Your own totals for the day. The app computes totals itself from foods × grams and warns where your value differs by more than 5%. |
 
 **ExpectedTotals** — `kcal`, `proteinG`, `carbsG`, `fatG`, `fibreG` and `costInr`. Each is an optional number ≥ 0.
+- `costInr` is compared with the full **day cost**, including items whose price has `excludeFromBudget: true`.
 
 ### 4.5 Meal
 
@@ -287,7 +293,7 @@ Nutrition plans are checked on import against the athlete's diet rules **in the 
 
 **Warnings** (shown in the preview; the import is allowed):
 - Computed totals differ from `expectedTotals` by more than 5%.
-- The day's cost is over `budgetInrPerDay` (the gap is shown in ₹).
+- The day's **budget cost** (day cost minus items whose price has `excludeFromBudget: true`) is over `budgetInrPerDay`. The gap is shown in ₹.
 - A budget is set but the day's cost is incomplete because of unpriced items.
 - A food's fibre is unknown.
 - A food key already exists with different values (a new revision is created, and the diff is shown).
@@ -300,6 +306,7 @@ Nutrition plans are checked on import against the athlete's diet rules **in the 
 **Info:**
 - Dates in the range that have no sessions or meal plan.
 - Cost can't be computed because of unpriced items and no budget is set.
+- Which foods are excluded from the budget, with their cost per day.
 - Counts of everything that will be created.
 
 ---
@@ -423,6 +430,6 @@ This isn't a complete file; it's one entry for the `sessions` list of a team pla
 - [ ] Every date is inside `startDate`–`endDate`; nutrition days are unique.
 - [ ] Unknown values are `null` or left out, **never `0` or `""`**.
 - [ ] Training: every session athlete is in `athletes`; runs have `distanceM` (per set); station exercises use a seeded station key; there's a `lighterOption` where a lighter alternative makes sense.
-- [ ] Nutrition: every `foodKey` is defined in `foods`; every food has a real `source` and an honest `isEstimate`; `per100g` matches the state the grams are weighed in; oil, ghee, milk and sugar are items; prices have `asOf` ≤ `startDate`, with `gramsPerUnit` for `ml`/`l`/`piece`.
+- [ ] Nutrition: every `foodKey` is defined in `foods`; every food has a real `source` and an honest `isEstimate`; `per100g` matches the state the grams are weighed in; oil, ghee, milk and sugar are items; prices have `asOf` ≤ `startDate`, with `gramsPerUnit` for `ml`/`l`/`piece`; anything already paid for has `excludeFromBudget: true`.
 - [ ] Nutrition: no item breaks the athlete's diet rules on its date. Eggs on vegetarian days stay out until they're explicitly allowed.
 - [ ] A machine-readable JSON Schema generated from the validator will be in `docs/import-schema/` (from M2). It checks structure only; the cross-field rules in §5–6 are checked by the app's import preview.

@@ -1,0 +1,620 @@
+{
+  "schemaVersion": 1,
+  "kind": "training",
+  "title": "Yoddha prep: pilot week (13-19 Oct)",
+  "planKey": "yoddha_prep_training",
+  "versionNote": "Pilot week, approved 13 Oct 2026. Revised after an independent review: Saturday rest and Sunday run, sled ladder capped at RPE 8 / 130 kg, 24 kg carry test moved to week 2, box-jump practice before Friday, easier Monday runs.",
+  "status": "approved",
+  "startDate": "2026-10-13",
+  "endDate": "2026-10-19",
+  "assumptions": [
+    "Aryan's run, strength and station levels are unknown until this week's tests; his starting loads (80 kg sled push, 70 kg sled pull, 2 x 16 kg carry, 10 kg lunge) are assumptions.",
+    "Both partners run every 700 m together. The rulebook doesn't say so; this follows the HYROX convention until the organisers confirm.",
+    "Rower 'Resistance 7' is assumed to mean Concept2 damper 7.",
+    "Chinmay's longest run in the 30 days before the pilot was 5.76 km (4 Oct)."
+  ],
+  "athletes": [
+    "chinmay",
+    "aryan"
+  ],
+  "eventCategory": "yoddha_s3_mumbai_2026/mens_doubles",
+  "sessions": [
+    {
+      "date": "2026-10-13",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": true,
+      "type": "strength",
+      "title": "Lower-body strength + sled push",
+      "objective": "Build leg strength for the sled and lunges, find the heaviest sled load you can push at a steady pace, and practise legal sled turns. Target effort RPE 6-7, nothing maximal.",
+      "estimatedMinutes": 65,
+      "warmup": [
+        "3 min easy row or bike",
+        "Leg swings 10 per side, forward and sideways",
+        "10 bodyweight squats, 10 walking lunges, 10 glute bridges, 5 inchworms",
+        "2 light ramp-up sets of the squat"
+      ],
+      "blocks": [
+        {
+          "name": "Strength",
+          "exercises": [
+            {
+              "name": "Back squat or goblet squat",
+              "category": "strength",
+              "sets": 4,
+              "reps": 6,
+              "restSec": 120,
+              "targetRpe": "7",
+              "load": {
+                "guidance": "About a 9-rep max; add 2.5-5 kg per set while RPE stays at 7 or below"
+              },
+              "notes": "Write down the final weight.",
+              "perAthlete": {
+                "aryan": {
+                  "notes": "Use a goblet squat (dumbbell or kettlebell at the chest) if barbell form isn't solid."
+                }
+              }
+            },
+            {
+              "name": "Romanian deadlift",
+              "category": "strength",
+              "sets": 3,
+              "reps": 8,
+              "restSec": 90,
+              "targetRpe": "7",
+              "load": {
+                "guidance": "Barbell or dumbbells at RPE 7"
+              },
+              "notes": "Hinge at the hips, back flat, bar close to the legs, lower to mid-shin."
+            }
+          ]
+        },
+        {
+          "name": "Stations",
+          "exercises": [
+            {
+              "name": "Sandbag walking lunge",
+              "category": "lunge",
+              "sets": 3,
+              "distanceM": 20,
+              "restSec": 90,
+              "targetRpe": "6-7",
+              "load": {
+                "kg": 20,
+                "guidance": "Across both shoulders"
+              },
+              "notes": "Race standard on every rep: back knee touches the floor, stand up fully, alternate legs. The rulebook lists +5 min for a knee that doesn't touch, so the partner watches for it.",
+              "perAthlete": {
+                "aryan": {
+                  "load": {
+                    "guidance": "Start at 10 kg or bodyweight (assumption); 20 kg once every rep is clean"
+                  }
+                }
+              }
+            },
+            {
+              "name": "Sled push ladder",
+              "category": "sled_push",
+              "sets": 6,
+              "targetRpe": "7-8",
+              "load": {
+                "guidance": "Start ~100 kg, +10 kg per push; stop at RPE 8; cap 130 kg this week"
+              },
+              "notes": "One lane (about 12-15 m) per push, taking turns, which gives each of you 60-90 s rest. Stop the ladder when a push feels like RPE 8 or the sled clearly slows; never push to a stall. The sled fully crosses the line before you turn, and you always face the direction of travel. Record the heaviest load pushed at a steady pace.",
+              "perAthlete": {
+                "aryan": {
+                  "load": {
+                    "guidance": "Start ~80 kg (assumption), +10 kg per push; stop at RPE 8"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Core",
+          "exercises": [
+            {
+              "name": "Dead bug",
+              "category": "strength",
+              "sets": 2,
+              "reps": 8,
+              "notes": "8 per side."
+            },
+            {
+              "name": "Side plank",
+              "category": "strength",
+              "sets": 2,
+              "durationSec": 30,
+              "notes": "30 s per side."
+            }
+          ]
+        }
+      ],
+      "cooldown": [
+        "3 min easy walk",
+        "Stretch calves, hip flexors, hamstrings, quads and lats, 30 s each side",
+        "1 min slow breathing"
+      ],
+      "recovery": "Legs will feel this on Wednesday, so keep Wednesday's run truly easy. Aryan: if you run in the morning, keep it easy (RPE 3-4, 40 min max).",
+      "stopCriteria": [
+        "Chest pain or pressure, fainting or near-fainting, dizziness that doesn't settle, palpitations, breathlessness far out of proportion to the effort, or confusion: stop training and get medical advice before training again.",
+        "Heat illness signs (headache, nausea, chills in the heat, cramps, unusual weakness, sweating that stops): stop, get somewhere cool, sip water or ORS, and get help if not better in about 15 minutes.",
+        "Sharp or joint pain, pain that changes how you move, or pain that gets worse: stop that exercise."
+      ],
+      "lighterOption": "Squat and RDL 2 sets each, lunges 2 x 20 m bodyweight, sled 4 pushes at your ladder starting load, no ladder."
+    },
+    {
+      "date": "2026-10-14",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": true,
+      "type": "run",
+      "title": "Easy run-walk + row, wall-ball and box-jump technique",
+      "objective": "Aerobic base at an easy pace, learning to run as a pair, and first technique practice on the rower, wall balls and box jumps.",
+      "estimatedMinutes": 60,
+      "warmup": [
+        "Brisk walk 3 min",
+        "Leg swings",
+        "A-skips 2 x 15 m",
+        "Ankle hops 2 x 10"
+      ],
+      "blocks": [
+        {
+          "name": "Run",
+          "exercises": [
+            {
+              "name": "Run-walk together",
+              "category": "run",
+              "sets": 1,
+              "distanceM": 3000,
+              "targetRpe": "3-4",
+              "notes": "Run 4 min / walk 1 min. You should be able to speak in full sentences. Chinmay decides when to walk; Aryan matches his pace. Stop at 3 km even if you feel good. Note total time and number of walk breaks."
+            }
+          ]
+        },
+        {
+          "name": "Technique",
+          "exercises": [
+            {
+              "name": "Row technique",
+              "category": "row",
+              "sets": 3,
+              "durationSec": 120,
+              "restSec": 60,
+              "targetRpe": "4-5",
+              "load": {
+                "guidance": "Damper 7 (assumed race setting)"
+              },
+              "notes": "Stroke rate 22-26. Legs, then body, then arms on the drive; arms, then body, then legs on the way back. Write down the drag factor at damper 7."
+            },
+            {
+              "name": "Wall-ball technique",
+              "category": "wall_ball",
+              "sets": 5,
+              "reps": 6,
+              "restSec": 60,
+              "targetRpe": "5",
+              "load": {
+                "kg": 6,
+                "guidance": "9 ft target, or the nearest target your gym has"
+              },
+              "notes": "Hips below knees on every rep; catch the ball and drop straight into the next squat in one flow. The partner calls no-reps."
+            },
+            {
+              "name": "Box-jump practice",
+              "category": "box_jump",
+              "sets": 3,
+              "reps": 5,
+              "restSec": 60,
+              "targetRpe": "4",
+              "notes": "40-50 cm box. Two-foot take-off and landing, stand tall on top, step down. Prepares you for Friday's check."
+            }
+          ]
+        }
+      ],
+      "cooldown": [
+        "3 min easy walk",
+        "Stretch calves, hip flexors, hamstrings, quads and lats, 30 s each side",
+        "1 min slow breathing"
+      ],
+      "recovery": "Easy day: it should leave you fresher, not tired.",
+      "stopCriteria": [
+        "Chest pain or pressure, fainting or near-fainting, dizziness that doesn't settle, palpitations, breathlessness far out of proportion to the effort, or confusion: stop training and get medical advice before training again.",
+        "Heat illness signs (headache, nausea, chills in the heat, cramps, unusual weakness, sweating that stops): stop, get somewhere cool, sip water or ORS, and get help if not better in about 15 minutes.",
+        "Sharp or joint pain, pain that changes how you move, or pain that gets worse: stop that exercise."
+      ],
+      "lighterOption": "2 km run-walk (3 min run / 1 min walk); skip the wall balls and box jumps."
+    },
+    {
+      "date": "2026-10-15",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": true,
+      "type": "strength",
+      "title": "Upper body + sled pull + carries",
+      "objective": "Pulling strength and grip for the sled pull and, later, the 2 x 24 kg carry. Replaces the two separate pull days with one upper-body day. RPE 6-7.",
+      "estimatedMinutes": 65,
+      "warmup": [
+        "Row 3 min easy",
+        "Band pull-aparts 2 x 15",
+        "Scapular pull-ups 1 x 8",
+        "Push-ups 1 x 8"
+      ],
+      "blocks": [
+        {
+          "name": "Upper body",
+          "exercises": [
+            {
+              "name": "Strict pull-ups",
+              "category": "strength",
+              "sets": 4,
+              "reps": 5,
+              "restSec": 120,
+              "targetRpe": "7",
+              "notes": "Stop each set well short of your max.",
+              "perAthlete": {
+                "aryan": {
+                  "notes": "4 sets of (his max minus 2), or lat pulldown 4 x 8 at RPE 7 if he can't do 5 strict (assumption until tested)."
+                }
+              }
+            },
+            {
+              "name": "Push-ups or dumbbell bench press",
+              "category": "strength",
+              "sets": 3,
+              "reps": 10,
+              "restSec": 90,
+              "targetRpe": "7"
+            },
+            {
+              "name": "One-arm dumbbell row",
+              "category": "strength",
+              "sets": 3,
+              "reps": 10,
+              "restSec": 60,
+              "targetRpe": "7",
+              "notes": "10 per side."
+            }
+          ]
+        },
+        {
+          "name": "Stations",
+          "exercises": [
+            {
+              "name": "Sled pull",
+              "category": "sled_pull",
+              "sets": 3,
+              "targetRpe": "6-7",
+              "load": {
+                "guidance": "Work from 80 kg up to 100 kg only if the sled keeps moving smoothly"
+              },
+              "notes": "3 lanes each, taking turns. Hand over hand, stay standing, feet inside the athlete box, rope inside your lane.",
+              "perAthlete": {
+                "aryan": {
+                  "load": {
+                    "guidance": "Start at 70 kg (assumption until we have his numbers)"
+                  }
+                }
+              }
+            },
+            {
+              "name": "Kettlebell farmer's carry",
+              "category": "kb_carry",
+              "sets": 4,
+              "distanceM": 40,
+              "restSec": 90,
+              "targetRpe": "7",
+              "load": {
+                "guidance": "2 x 20 kg"
+              },
+              "notes": "Arms straight at your sides. Stop each set before your grip fails. The 2 x 24 kg race-weight test moves to week 2 so your grip is fresh for Friday's row.",
+              "perAthlete": {
+                "aryan": {
+                  "load": {
+                    "guidance": "2 x 16 kg, up to 2 x 20 kg if controlled (assumption)"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Core",
+          "exercises": [
+            {
+              "name": "Hanging knee raises",
+              "category": "strength",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Plank",
+              "category": "strength",
+              "sets": 2,
+              "durationSec": 40
+            }
+          ]
+        }
+      ],
+      "cooldown": [
+        "3 min easy walk",
+        "Stretch calves, hip flexors, hamstrings, quads and lats, 30 s each side",
+        "1 min slow breathing"
+      ],
+      "recovery": "Friday is the test day, so keep tonight's effort controlled. Aryan: an easy morning run is fine (40 min max, RPE 3-4).",
+      "stopCriteria": [
+        "Chest pain or pressure, fainting or near-fainting, dizziness that doesn't settle, palpitations, breathlessness far out of proportion to the effort, or confusion: stop training and get medical advice before training again.",
+        "Heat illness signs (headache, nausea, chills in the heat, cramps, unusual weakness, sweating that stops): stop, get somewhere cool, sip water or ORS, and get help if not better in about 15 minutes.",
+        "Sharp or joint pain, pain that changes how you move, or pain that gets worse: stop that exercise."
+      ],
+      "lighterOption": "Pull-ups 3 x 4, skip the dumbbell row, sled pull 2 lanes at 80 kg, carries 3 x 30 m at 2 x 16 kg."
+    },
+    {
+      "date": "2026-10-16",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": true,
+      "type": "test",
+      "title": "Baseline tests (controlled, not maximal)",
+      "objective": "Real numbers for both athletes, so next week's paces, loads and station split are based on data. RPE 7-8 maximum. Tuesday's steady sled load counts as this week's sled test.",
+      "estimatedMinutes": 70,
+      "warmup": [
+        "Easy jog 5 min",
+        "Running drills",
+        "2 x 80 m strides building to moderate",
+        "Row 2 min easy"
+      ],
+      "blocks": [
+        {
+          "name": "Tests",
+          "exercises": [
+            {
+              "name": "700 m run test",
+              "category": "run",
+              "sets": 1,
+              "distanceM": 700,
+              "targetRpe": "7-8",
+              "notes": "Controlled hard. Each athlete runs it separately, so Aryan's number is his own. Walk 5 min afterwards. Chinmay: try it without a walk break; if you need one, take it and write it down."
+            },
+            {
+              "name": "1,000 m row test",
+              "category": "row",
+              "sets": 1,
+              "distanceM": 1000,
+              "targetRpe": "7-8",
+              "load": {
+                "guidance": "Damper 7"
+              },
+              "notes": "Strong and even, not all-out. One rows while the other rests and records. Record total time, average /500 m split and drag factor."
+            },
+            {
+              "name": "Wall balls: max unbroken valid reps",
+              "category": "wall_ball",
+              "sets": 1,
+              "reps": 30,
+              "targetRpe": "7-8",
+              "load": {
+                "kg": 6,
+                "guidance": "9 ft target"
+              },
+              "notes": "Cap 30 reps. Stop at the first no-rep or form break. Rest 3 min afterwards."
+            },
+            {
+              "name": "Box-jump check at 60 cm",
+              "category": "box_jump",
+              "sets": 2,
+              "reps": 5,
+              "notes": "A technique check, not timed. Two-foot take-off and landing, full hip and knee extension on top, step down. If 60 cm feels unsafe, use 50 cm and note it."
+            }
+          ]
+        }
+      ],
+      "cooldown": [
+        "3 min easy walk",
+        "Stretch calves, hip flexors, hamstrings, quads and lats, 30 s each side",
+        "1 min slow breathing"
+      ],
+      "recovery": "Aryan: no morning run today. Weigh before and after the session (towel off, same clothes) to estimate sweat loss. At home, soak rice and urad dal for Saturday's idli batter.",
+      "stopCriteria": [
+        "Chest pain or pressure, fainting or near-fainting, dizziness that doesn't settle, palpitations, breathlessness far out of proportion to the effort, or confusion: stop training and get medical advice before training again.",
+        "Heat illness signs (headache, nausea, chills in the heat, cramps, unusual weakness, sweating that stops): stop, get somewhere cool, sip water or ORS, and get help if not better in about 15 minutes.",
+        "Sharp or joint pain, pain that changes how you move, or pain that gets worse: stop that exercise.",
+        "Stop any test if form breaks down."
+      ],
+      "lighterOption": "Do only the 700 m run and the wall balls, both at RPE 7."
+    },
+    {
+      "date": "2026-10-17",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": false,
+      "type": "rest",
+      "title": "Full rest",
+      "objective": "Recover from Friday's tests and bank sleep before Sunday's morning run.",
+      "recovery": "Chinmay: rest; an optional 20-30 min easy walk is fine. Aryan: rest, or an easy run (40 min max, RPE 3) only if he feels fresh. Early dinner (8:30 pm) and aim to be asleep by about 1 am, so you get 6.5-7 h before Sunday's run. Soak moong dal tonight for Sunday's chilla. Lay out kit."
+    },
+    {
+      "date": "2026-10-18",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": true,
+      "type": "run",
+      "title": "Easy 5 km run-walk (morning)",
+      "objective": "Aerobic base, and building toward race-length running without a risky jump in distance. No evening session.",
+      "estimatedMinutes": 55,
+      "warmup": [
+        "Drink 300-400 ml water on waking",
+        "Brisk walk 5 min and drills"
+      ],
+      "blocks": [
+        {
+          "name": "Run",
+          "exercises": [
+            {
+              "name": "Run-walk 5 km",
+              "category": "run",
+              "sets": 1,
+              "distanceM": 5000,
+              "targetRpe": "3-4",
+              "notes": "Start around 8 am (or your usual time). Run 5 min / walk 1 min. Cap at 5.5 km: Chinmay's longest run in the last 30 days was 5.76 km (4 Oct). Mumbai mornings are warm and humid, so start easy. Aryan runs at Chinmay's pace; this replaces his own Sunday run."
+            }
+          ]
+        },
+        {
+          "name": "After the run",
+          "exercises": [
+            {
+              "name": "Slow calf raises",
+              "category": "strength",
+              "sets": 2,
+              "reps": 15
+            },
+            {
+              "name": "Dead bug",
+              "category": "strength",
+              "sets": 2,
+              "reps": 8,
+              "notes": "8 per side."
+            },
+            {
+              "name": "Side plank",
+              "category": "strength",
+              "sets": 2,
+              "durationSec": 30,
+              "notes": "30 s per side."
+            }
+          ]
+        }
+      ],
+      "cooldown": [
+        "3 min easy walk",
+        "Stretch calves, hip flexors, hamstrings and quads, 30 s each side"
+      ],
+      "recovery": "Early dinner (8:30 pm) and an earlier bedtime tonight.",
+      "stopCriteria": [
+        "Chest pain or pressure, fainting or near-fainting, dizziness that doesn't settle, palpitations, breathlessness far out of proportion to the effort, or confusion: stop training and get medical advice before training again.",
+        "Heat illness signs (headache, nausea, chills in the heat, cramps, unusual weakness, sweating that stops): stop, get somewhere cool, sip water or ORS, and get help if not better in about 15 minutes.",
+        "Sharp or joint pain, pain that changes how you move, or pain that gets worse: stop that exercise."
+      ],
+      "lighterOption": "3.5 km run-walk."
+    },
+    {
+      "date": "2026-10-19",
+      "athletes": [
+        "chinmay",
+        "aryan"
+      ],
+      "joint": true,
+      "type": "combo",
+      "title": "Run-to-station practice + doubles switching",
+      "objective": "First practice of moving from a run straight into a station, legal doubles switching, and pacing as a pair. The runs are deliberately easy. This is not a race simulation. RPE 5-6 overall.",
+      "estimatedMinutes": 70,
+      "warmup": [
+        "3 min easy row or bike",
+        "Leg swings 10 per side, forward and sideways",
+        "10 bodyweight squats, 10 walking lunges, 10 glute bridges, 5 inchworms"
+      ],
+      "blocks": [
+        {
+          "name": "Run to station x 3 (walk 2-3 min between rounds)",
+          "exercises": [
+            {
+              "name": "Run 700 m",
+              "category": "run",
+              "sets": 1,
+              "distanceM": 700,
+              "targetRpe": "4-5",
+              "notes": "Easy run-walk together. Chinmay takes walk breaks as needed; Aryan stays with him. Record the split."
+            },
+            {
+              "name": "Sled push",
+              "category": "sled_push",
+              "sets": 1,
+              "targetRpe": "6",
+              "load": {
+                "guidance": "About 20% under Tuesday's steady load"
+              },
+              "notes": "One lane each: 2 lanes for the pair, switching pusher every lane."
+            },
+            {
+              "name": "Run 700 m",
+              "category": "run",
+              "sets": 1,
+              "distanceM": 700,
+              "targetRpe": "4-5",
+              "notes": "Easy run-walk together. Record the split."
+            },
+            {
+              "name": "Sandbag lunges",
+              "category": "lunge",
+              "sets": 2,
+              "distanceM": 10,
+              "targetRpe": "6",
+              "load": {
+                "kg": 20
+              },
+              "notes": "2 x 10 m each. Hand the sandbag over at a cone marked as the swap zone, the only legal place to switch in the race.",
+              "perAthlete": {
+                "aryan": {
+                  "load": {
+                    "guidance": "His Tuesday lunge load"
+                  }
+                }
+              }
+            },
+            {
+              "name": "Run 700 m",
+              "category": "run",
+              "sets": 1,
+              "distanceM": 700,
+              "targetRpe": "4-5",
+              "notes": "Easy run-walk together. Record the split."
+            },
+            {
+              "name": "Wall balls",
+              "category": "wall_ball",
+              "sets": 2,
+              "reps": 10,
+              "targetRpe": "6",
+              "load": {
+                "kg": 6,
+                "guidance": "9 ft target"
+              },
+              "notes": "30 reps for the pair, switching every 10: Chinmay takes turns 1 and 3, Aryan turn 2. Swap roles next time.",
+              "perAthlete": {
+                "aryan": {
+                  "sets": 1
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "cooldown": [
+        "3 min easy walk",
+        "Stretch calves, hip flexors, hamstrings, quads and lats, 30 s each side",
+        "1 min slow breathing"
+      ],
+      "recovery": "Aryan: no morning run today. Week 2 is planned from what this week shows.",
+      "stopCriteria": [
+        "Chest pain or pressure, fainting or near-fainting, dizziness that doesn't settle, palpitations, breathlessness far out of proportion to the effort, or confusion: stop training and get medical advice before training again.",
+        "Heat illness signs (headache, nausea, chills in the heat, cramps, unusual weakness, sweating that stops): stop, get somewhere cool, sip water or ORS, and get help if not better in about 15 minutes.",
+        "Sharp or joint pain, pain that changes how you move, or pain that gets worse: stop that exercise."
+      ],
+      "lighterOption": "2 rounds only, sled about 30% under Tuesday's steady load."
+    }
+  ]
+}

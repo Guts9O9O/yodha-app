@@ -9,6 +9,9 @@ test-results/
 drizzle/
 package-lock.json
 
+# Real plan files kept exactly as authored outside the app (test inputs, never seeded)
+data/
+
 # Hand-formatted docs (tables are aligned by hand)
 docs/
 *.md

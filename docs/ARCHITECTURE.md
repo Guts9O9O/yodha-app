@@ -351,6 +351,7 @@ Constraint notation below: **PK**, **UQ** (unique), **pUQ** (partial unique), **
   - `food_id`, `price_inr numeric(10,2)`, `per_qty numeric`
   - `unit enum(g, kg, ml, l, piece)`, `grams_per_unit numeric?`
   - `as_of date`, `source`, `is_estimate`, `import_id?`
+  - `exclude_from_budget bool NOT NULL default false` *(owner request, 2026-10-13: already-paid items still show their cost but aren't counted against the daily budget)*
 - **CK** `unit IN ('g','kg') OR grams_per_unit > 0`. Cost has to resolve to grams.
 - **UQ**(food_id, as_of, source), **IX**(food_id, as_of desc).
 
@@ -443,6 +444,7 @@ New fields:
 - `onboarding_response.section` and `onboarding_response.health_flag`
 - `checklist_item.is_private`
 - `benchmark_type.event_category_id`
+- `food_price.exclude_from_budget`
 
 Renamed or changed:
 - `goal_type` value `medal_sub90` becomes `medal`.
@@ -625,7 +627,7 @@ All stages are pure functions except where marked **[DB]**. Each stage appends t
      - Eggs on a vegetarian day with `eggsAllowed = null` → error "eggs pending".
      - `excludedItems` match whole words against the food name or key.
    - **Totals vs. `expectedTotals` (WARNING):** per nutrient, flagged when more than 5% off.
-   - **Cost vs. `budgetInrPerDay` (WARNING):** shows the ₹ gap and never rounds it down. Unpriced items make the day's cost "incomplete", not ₹0.
+   - **Cost vs. `budgetInrPerDay` (WARNING):** compares the budget cost (excluding `excludeFromBudget` items), shows the ₹ gap and never rounds it down. Unpriced items make the day's cost "incomplete", not ₹0.
    - **Run spike (WARNING, training):** each planned run vs. the longest *logged* run in the previous 30 days. For future dates, earlier planned runs in the same file also count toward the baseline. With no baseline: info "can't assess".
    - **Overlap:**
      - Nutrition: another approved nutrition version covering the same athlete and date → error (one meal plan per day).
@@ -673,7 +675,11 @@ Previews older than 24 hours become `expired`. Old versions stay viewable at `/p
 - **Cost per gram:** `price_inr / (per_qty × grams per unit)`.
   - Uses the most recent `food_price` with `as_of ≤ date`; if there's none, the earliest later price.
   - No price at all → the day's cost is "incomplete", never ₹0.
-- **Display:** cost is **rounded up** to the rupee, and the overage is `displayed cost − budget`, shown in ₹.
+- **Two totals per day:**
+  - **Day cost:** every priced item. It's shown as a breakdown, with excluded items marked, and it's what `expectedTotals.costInr` is compared with.
+  - **Budget cost:** the day cost minus items whose chosen price has `exclude_from_budget`. Only this is compared with `budgetInrPerDay`.
+  - The grocery list still lists excluded items, with quantities, and marks them as already paid.
+- **Display:** cost is **rounded up** to the rupee, and the overage is `displayed budget cost − budget`, shown in ₹.
 
 ### 5.5 Station split rules (`src/lib/race/station-split.js`)
 
@@ -726,6 +732,9 @@ Changes from the brief's original example shapes:
 | E2E | Playwright (M10) | Smoke: sign-in, import → preview → commit, log a set, check-in red flag, partner can't see private data |
 
 - **Test projects:** two Vitest projects, `unit` (parallel) and `integration` (serial, migrated once in global setup, tables truncated per file).
+- **Import test inputs:**
+  - The two IMPORT_FORMAT.md §8 examples (fixtures).
+  - The owner's **real pilot plans** in `data/plans/pilot/` (one training, two nutrition). These are never seeded. They must pass the structural schemas from M2, and import with **no errors** once the importer exists (M5 training, M6 nutrition).
 - **E2E sign-in:** Google OAuth can't run in CI, so Playwright inserts a session row into the **test** DB and sets the signed cookie with the test secret. There's no auth bypass in app code.
 
 ---
@@ -823,7 +832,7 @@ Neon's paid Launch plan has no monthly minimum ($0.106/CU-hour), but it's a paid
 5. Better Auth: `server/auth/auth.js`, `app/api/auth/[...all]/route.js`, generated auth schema, allowlist hook.
 6. `server/auth/viewer.js`, `proxy.js`, sign-in page.
 7. `server/authz/policy.js` + unit tests.
-8. Zod: `schemas/common.js`, `schemas/import/training-v1.js`, `schemas/import/nutrition-v1.js` + fixture tests.
+8. Zod: `schemas/common.js`, `schemas/import/training-v1.js`, `schemas/import/nutrition-v1.js` + fixture tests. These cover the §8 examples, `excludeFromBudget`, and the `data/plans/pilot/` files, which must pass.
 9. `tests/helpers/db.js`, `tests/helpers/factories.js`, `tests/integration/authz.test.js` (cross-user denial).
 10. `scripts/db-backup.mjs`, `scripts/db-restore-check.mjs` + `npm run db:backup` / `db:restore-check` / `db:migrate:prod` (backup, then migrate). This comes before deploy, so backups exist from the first real row (BACKUP.md).
 11. **Deploy:**

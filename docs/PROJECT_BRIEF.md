@@ -251,6 +251,8 @@ The full schema, with fields, types, relations, indexes and constraints, is in *
   - **Never round down, hide or soften an overage.** Show the gap in rupees.
   - Costs are rounded up.
   - A day with unpriced items shows its cost as "incomplete", never ₹0.
+  - A price marked `excludeFromBudget` (e.g. protein powder already paid for) still shows in the day's cost breakdown but isn't counted against the budget.
+- **Real pilot plans** live in `data/plans/pilot/`. They're never seeded; they're used as real-world test inputs for the importer.
 
 ---
 
