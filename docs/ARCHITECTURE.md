@@ -828,21 +828,24 @@ Neon's paid Launch plan has no monthly minimum ($0.106/CU-hour), but it's a paid
 5. `vitest.config.mjs` (unit/integration projects), `src/lib/dates.js` + tests (the first real module; it also proves the test setup works).
 6. `README.md` skeleton, plus the `CLAUDE.md` commands section filled in.
 
-**M2 — Backend foundation (+ first deploy)** (branch `m2-backend`)
-1. `src/server/env.js` (Zod-validated env), `drizzle.config.js`, `src/server/db/client.js` (pool, `attachDatabasePool`, DATE type parser), `schema/_shared.js` (enums, column helpers).
-2. `schema/identity.js`, `schema/race.js`.
-3. `schema/plans.js`, `schema/training.js`.
-4. `schema/nutrition.js`, `schema/recovery.js` → generate the first migration and review the SQL.
-5. Better Auth: `server/auth/auth.js`, `app/api/auth/[...all]/route.js`, generated auth schema, allowlist hook.
-6. `server/auth/viewer.js`, `proxy.js`, sign-in page.
-7. `server/authz/policy.js` + unit tests.
-8. Zod: `schemas/common.js`, `schemas/import/training-v1.js`, `schemas/import/nutrition-v1.js` + fixture tests. These cover the §8 examples, `excludeFromBudget`, and the `data/plans/pilot/` files, which must pass.
-9. `tests/helpers/db.js`, `tests/helpers/factories.js`, `tests/integration/authz.test.js` (cross-user denial).
-10. `scripts/db-backup.mjs`, `scripts/db-restore-check.mjs` + `npm run db:backup` / `db:restore-check` / `db:migrate:prod` (backup, then migrate). This comes before deploy, so backups exist from the first real row (BACKUP.md).
-11. **Deploy:**
-    - **Gate:** Next.js bumped to the patched 16.4.x, and `npm audit --omit=dev` (production dependencies) clean of critical/high issues.
-    - Set up the Vercel project (`sin1`) and Neon (Singapore, PG18), run the prod migration, and add the Google OAuth redirect URIs.
-    - Result: both athletes can sign in at one URL.
+**M2 — Backend foundation (+ first deploy)** (branch `m2-backend`). As built, after splitting the original 11 batches more finely:
+0. Owner request: `excludeFromBudget` in the import format; real pilot plans in `data/plans/pilot/` as test inputs.
+1. `src/server/env.js` (Zod-validated env in lazy groups); ESM package; M2 dependencies.
+2. `db/client.js` (pg pool + `attachDatabasePool`, DATE parser), `drizzle.config.js`, integration harness (refuses non-`*_test` DBs).
+3. Allowlist + Better Auth options (Google only, hooks on user and session creation).
+4. Better Auth instance (lazy) + CLI-generated auth tables (`npm run auth:generate`).
+5. Shared enums (`src/lib/enums.js`), column helpers, identity tables.
+6. Race reference, race entry, goal, plan and import tables.
+7. Training and nutrition tables.
+8. Recovery tables, initial migration (41 tables), `npm run db:migrate`.
+9. Viewer: `dal/viewer.js` (session → athlete, teams, teammates) + `auth/viewer.js` (per request, allowlist re-check); test helpers.
+10. Auth route handler, `proxy.js` (UX redirect), browser auth client.
+11. Sign-in page, sign-in/out buttons, signed-in home.
+12. Authorization policy + `readableAthleteIds` + cross-user access matrix.
+13. Zod import schemas (training/nutrition v1) with §8 fixtures and the pilot plans.
+14. Backup, restore-check and `db:migrate:prod` scripts (tested end to end locally).
+15. JSON Schema export for plan authors (`npm run import-schema`).
+16. Deploy prep (`vercel.json` → `sin1`, docs/DEPLOY.md). **Deploy itself:** after the Next.js patch bump (gate) and the owner's account steps in docs/DEPLOY.md.
 
 **M3 — People and daily tracking**
 1. Onboarding question set v1 + answers schema + `dal/onboarding.js`.
