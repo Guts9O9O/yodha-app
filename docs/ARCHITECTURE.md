@@ -109,7 +109,7 @@ Versions were checked on 2026-10-13 against npm and official docs. Exact version
 - **Closed sets** (statuses, meal types, diet tags) are Postgres enums. Changes go through migrations.
 - **Delete rules:**
   - Plan content cascades from `plan_version`, so a draft with no logs can be deleted.
-  - Logs point at plan content with `ON DELETE RESTRICT`. Deleting plan content can never delete a log, and a version that has logs can't be deleted.
+  - Logs point at plan content with `ON DELETE NO ACTION` (checked at the end of the statement). Deleting plan content can never delete a log, and a version that has logs can't be deleted. Unlike `RESTRICT`, this still lets an account deletion cascade through both the plan and its logs in one statement.
   - Approved and archived versions are never deleted (an app rule, with a test).
 - **Display-only lists vs. computed fields:** lists that are only displayed (movement standards, warm-up steps) are `jsonb`/`text[]` and validated by Zod on the way in. Anything code computes on (station targets, switch limits, diet tags, macros) is a real column.
 
@@ -208,7 +208,7 @@ Constraint notation below: **PK**, **UQ** (unique), **pUQ** (partial unique), **
 
 **`race_entry`** *(new)* — a team's or athlete's registration in an event category.
 - Columns: `event_category_id`, `team_id?`, `athlete_id?` (**XOR**), `wave_date date?`, `wave_time time?`, `reporting_time time?`, `bib?`, `notes`.
-- **pUQ**(team_id, event_category_id) and **pUQ**(athlete_id, event_category_id).
+- **UQ**(team_id, event_category_id) and **UQ**(athlete_id, event_category_id). Rows with a NULL owner column never conflict, so no `WHERE` is needed.
 - This replaces "Team links to an event category". A team is just the pair, so the same pair can enter future events.
 - The countdown targets `wave_date` once it's known, and the event's `start_date` with "wave day TBC" before then.
 
@@ -235,7 +235,7 @@ Constraint notation below: **PK**, **UQ** (unique), **pUQ** (partial unique), **
   - `sha256`
   - `status enum(previewed, committed, rejected, expired)`
   - `report jsonb` (errors, warnings, summary)
-  - `plan_version_id?`, `created_at`, `committed_at?`
+  - `created_at`, `committed_at?` (the link to the version is `plan_version.import_id`; a back-reference here would only create a circular FK)
 - **IX**(imported_by_athlete_id, created_at desc), **IX**(sha256).
 
 **`plan_version`**
@@ -288,7 +288,7 @@ Constraint notation below: **PK**, **UQ** (unique), **pUQ** (partial unique), **
 **`workout_log`**
 - Columns:
   - `athlete_id`, `date`
-  - `session_id?` → training_session **RESTRICT**
+  - `session_id?` → training_session **NO ACTION**
   - `status enum(completed, partial, skipped)`
   - `actual_minutes?`, `session_rpe smallint?` **CK** 1–10, `notes`
 - **pUQ**(athlete_id, session_id) WHERE session_id IS NOT NULL. This gives one log per planned session per athlete and makes double-taps idempotent.
@@ -297,7 +297,7 @@ Constraint notation below: **PK**, **UQ** (unique), **pUQ** (partial unique), **
 **`set_log`**
 - Columns:
   - `workout_log_id` (cascade)
-  - `prescription_id?` **RESTRICT**
+  - `prescription_id?` **NO ACTION**
   - `exercise_position smallint`, `exercise_name`
   - `category text` *(new; needed to compute run km for unplanned runs)*
   - `set_number`, `reps`, `load_kg`, `distance_m`, `duration_sec`, `rpe?`
@@ -377,16 +377,16 @@ Constraint notation below: **PK**, **UQ** (unique), **pUQ** (partial unique), **
 - **UQ**(meal_plan_day_id, position).
 
 **`planned_meal_item`**
-- Columns: `planned_meal_id` (cascade), `position`, `food_revision_id` **RESTRICT**, `grams numeric` **CK** > 0, `household`.
+- Columns: `planned_meal_id` (cascade), `position`, `food_revision_id` **NO ACTION**, `grams numeric` **CK** > 0, `household`.
 - **UQ**(planned_meal_id, position).
 
 **`meal_log`**
-- Columns: `athlete_id`, `date`, `meal_type`, `planned_meal_id?` **RESTRICT**, `notes`.
+- Columns: `athlete_id`, `date`, `meal_type`, `planned_meal_id?` **NO ACTION**, `notes`.
 - **pUQ**(athlete_id, planned_meal_id) WHERE planned_meal_id IS NOT NULL. This makes one-tap "ate as planned" idempotent.
 - **IX**(athlete_id, date).
 
 **`meal_log_item`**
-- Columns: `meal_log_id` (cascade), `food_revision_id` **RESTRICT**, `planned_item_id?`, `grams` **CK** > 0.
+- Columns: `meal_log_id` (cascade), `food_revision_id` **NO ACTION**, `planned_item_id?`, `grams` **CK** > 0.
 
 ### 2.7 Recovery and team
 
