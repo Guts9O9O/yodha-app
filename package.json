@@ -21,6 +21,8 @@
     "db:up": "docker compose up -d --wait db",
     "db:down": "docker compose down",
     "db:psql": "docker compose exec db psql -U yoddha -d yoddha_dev",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node --env-file-if-exists=.env.local scripts/db-migrate.mjs",
     "auth:generate": "npx auth@1.7.7 generate --config scripts/auth-cli.config.mjs --output src/server/db/schema/auth.js --yes"
   },
   "dependencies": {

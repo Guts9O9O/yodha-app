@@ -36,8 +36,10 @@ stack, schema, authz, batch plan), `docs/IMPORT_FORMAT.md` (plan JSON spec), `do
 - `npm test` (unit) / `npm run test:integration` (needs `npm run db:up`) / `npm run test:all`
 - `npm run db:up` / `npm run db:down` / `npm run db:psql` — Docker Postgres 18 on localhost:5433,
   databases `yoddha_dev` and `yoddha_test`
-- Planned in M2: `db:generate`, `db:migrate`, `db:seed`, `db:backup`, `db:restore-check`,
-  `db:migrate:prod` (see docs/BACKUP.md)
+- `npm run db:generate` (drizzle-kit → `drizzle/`; review the SQL) / `npm run db:migrate` (dev DB;
+  integration tests migrate `yoddha_test` themselves). Don't use `drizzle-kit export`: it ignores casing.
+- `npm run auth:generate` regenerates `src/server/db/schema/auth.js` (never hand-edit it)
+- Planned in M2: `db:seed`, `db:backup`, `db:restore-check`, `db:migrate:prod` (see docs/BACKUP.md)
 
 ## Layout
 `src/app` routes (thin) · `src/features/<domain>` UI + server actions · `src/lib` pure logic

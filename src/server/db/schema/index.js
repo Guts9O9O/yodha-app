@@ -6,3 +6,4 @@ export * from "./race.js";
 export * from "./plans.js";
 export * from "./training.js";
 export * from "./nutrition.js";
+export * from "./recovery.js";
