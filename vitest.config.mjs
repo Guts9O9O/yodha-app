@@ -6,7 +6,13 @@ import { defineConfig } from "vitest/config";
 // - integration: real Postgres via TEST_DATABASE_URL, one file at a time (tests arrive in M2).
 export default defineConfig({
   resolve: {
-    alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      // `server-only` throws outside React Server Components; tests import server modules directly.
+      "server-only": fileURLToPath(
+        new URL("./node_modules/server-only/empty.js", import.meta.url),
+      ),
+    },
   },
   test: {
     environment: "node",
