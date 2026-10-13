@@ -4,3 +4,5 @@ export * from "./auth.js";
 export * from "./identity.js";
 export * from "./race.js";
 export * from "./plans.js";
+export * from "./training.js";
+export * from "./nutrition.js";
