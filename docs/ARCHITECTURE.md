@@ -603,7 +603,7 @@ All stages are pure functions except where marked **[DB]**. Each stage appends t
    - Unknown version → a clear error that lists the supported versions.
    - Objects are `z.strictObject(...)`, so a typo like `distanceMeters` is an error, not silently ignored.
    - Dates use `z.iso.date()`.
-4. **Structural checks** (pure):
+4. **Structural checks** (pure). Stages 3 and 4 are one pass: the Zod schemas in `src/schemas/import/` check the shape and, in `superRefine`, every rule that needs only the file. The importer adds the database-dependent stages 5–6.
    - `startDate ≤ endDate`, and every date is inside that range.
    - Dates are real calendar dates (`2026-02-30` is rejected).
    - Session athletes ⊆ plan athletes.
