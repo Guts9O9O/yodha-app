@@ -40,7 +40,7 @@ stack, schema, authz, batch plan), `docs/IMPORT_FORMAT.md` (plan JSON spec), `do
   integration tests migrate `yoddha_test` themselves). Don't use `drizzle-kit export`: it ignores casing.
 - `npm run auth:generate` regenerates `src/server/db/schema/auth.js` (never hand-edit it)
 - `npm run db:backup` / `db:restore-check -- <file>` / `db:migrate:prod -- --yes` (prod via `.env.prod.local`;
-  see docs/BACKUP.md). Planned: `db:seed` (M3/M4), `import-schema` (M2)
+  see docs/BACKUP.md). `npm run import-schema` regenerates docs/import-schema/ (a test fails if stale). Planned: `db:seed`
 
 ## Layout
 `src/app` routes (thin) · `src/features/<domain>` UI + server actions · `src/lib` pure logic
