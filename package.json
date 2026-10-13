@@ -23,6 +23,9 @@
     "db:psql": "docker compose exec db psql -U yoddha -d yoddha_dev",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "node --env-file-if-exists=.env.local scripts/db-migrate.mjs",
+    "db:migrate:prod": "node --env-file=.env.prod.local scripts/db-migrate-prod.mjs",
+    "db:backup": "node --env-file=.env.prod.local scripts/db-backup.mjs",
+    "db:restore-check": "node scripts/db-restore-check.mjs",
     "auth:generate": "npx auth@1.7.7 generate --config scripts/auth-cli.config.mjs --output src/server/db/schema/auth.js --yes"
   },
   "dependencies": {

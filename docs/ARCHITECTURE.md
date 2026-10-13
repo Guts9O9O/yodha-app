@@ -780,7 +780,7 @@ Changes from the brief's original example shapes:
 - **Migrations are never run in the Vercel build.** Flow:
   1. `drizzle-kit generate` locally.
   2. Review the SQL in the PR.
-  3. `npm run db:migrate:prod`. It takes a backup first, stops if the backup fails, then migrates over the direct URL.
+  3. `npm run db:migrate:prod -- --yes`. It prints the target (and stops without `--yes`), takes a backup, stops if the backup fails, then migrates over the direct URL.
   4. Merge to `main`, which triggers the deploy.
 - Migrations are written expand-then-contract, so the running version keeps working while it's applied.
 

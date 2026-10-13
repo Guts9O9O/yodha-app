@@ -22,6 +22,18 @@ export async function migrateDatabase(url) {
     await migrate(drizzle({ client: pool }), {
       migrationsFolder: MIGRATIONS_FOLDER,
     });
+  } catch (error) {
+    // Drizzle wraps driver errors as "Failed query: …"; surface the real reason. Connection
+    // failures can be an AggregateError with an empty message, so fall back to its code.
+    const cause = error?.cause ?? error;
+    const reason =
+      cause?.message ||
+      cause?.errors?.find((e) => e?.message)?.message ||
+      cause?.code ||
+      String(cause);
+    throw new Error(`Migrating ${describeDatabase(url)} failed: ${reason}`, {
+      cause: error,
+    });
   } finally {
     await pool.end();
   }
@@ -42,7 +54,7 @@ async function main() {
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   main().catch((error) => {
-    console.error(error);
+    console.error(error.message);
     process.exit(1);
   });
 }

@@ -4,8 +4,8 @@
 
 **Status:**
 - The procedure is approved (2026-10-13).
-- The `npm run db:backup` / `db:restore-check` scripts are built in M2, **before** the first production deploy.
-- Until then, the manual commands below work as they are.
+- The `npm run db:backup`, `db:restore-check` and `db:migrate:prod` scripts exist (built in M2, before the first production deploy) and were tested end to end against the local database.
+- The manual commands below still work if you ever need them without the scripts.
 
 ---
 
@@ -27,7 +27,7 @@
 | When | Who | How |
 |---|---|---|
 | Every Sunday evening | Owner | `npm run db:backup` |
-| Before every production migration | Automatic | `npm run db:migrate:prod` takes a backup first and stops if that fails |
+| Before every production migration | Automatic | `npm run db:migrate:prod -- --yes` takes a backup first and stops if that fails (without `--yes` it only prints the target) |
 | Fri 20 Nov 2026 (day before race) and the Monday after the race | Owner | `npm run db:backup` |
 | Monthly, and right after the first ever backup | Owner | `npm run db:restore-check` (see below) |
 
